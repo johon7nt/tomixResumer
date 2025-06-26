@@ -13,14 +13,11 @@
 
 <body>
 
-    <canvas id="noise-canvas"></canvas>
-
     <!-- Capa de contenido -->
-    <div class="content-wrapper">
-        
+    
         <nav id="navbar">
             <div class="nav-container">
-                <img src="/assets/images/logo-tomix-blanco.png" class="logo"></img>
+                <img src="/assets/images/logo-tomix-blanco.png" class="logo" href="#inicio"></img>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#inicio">INICIO</a></li>
                     <li><a href="#nosotros">NOSOTROS</a></li>
@@ -31,13 +28,12 @@
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <section class="hero" id="inicio">
+        <section class="principal" id="inicio">
             <div class="particles" id="particles"></div>
-            <div class="hero-content">
-                <h1 class="hero-title">TOMIX VISUALS</h1>
-                <p class="hero-subtitle">Creando el futuro visual</p>
-                <div class="hero-buttons">
+            <div class="principal-content">
+                <h1 class="principal-title">TOMIX VISUALS</h1>
+                <p class="principal-subtitle">Creando el futuro visual</p>
+                <div class="principal-buttons">
                     <a href="#servicios" class="btn-primary">Ver Servicios</a>
                     <a href="#contacto" class="btn-secondary">Contactar</a>
                 </div>
@@ -45,11 +41,11 @@
         </section>
 
 
-        <section class="about-section" id="nosotros">
+        <section class="nosotros-section" id="nosotros">
             
 
-            <div class="about-content">
-                <div class="about-header">
+            <div class="nosotros-content">
+                <div class="nosotros-header">
                     <div class="pre-title">Innovación Visual</div>
                     <h1>NOSOTROS</h1>
                 </div>
@@ -65,7 +61,7 @@
                 <p>Cada proyecto es una oportunidad para establecer nuevos estándares en la industria audiovisual y
                     digital.</p>
 
-                <div class="stats-container">
+                <div class="estadisticas-container">
                     <div class="stat-item">
                         <div class="stat-number" data-count="500">0</div>
                         <div class="stat-label">Proyectos</div>
@@ -91,9 +87,7 @@
         </section>
 
 
-   <section class="nexus-studio">        
-        <!-- Red de partículas -->
-        <div class="particle-network" id="particleNetwork"></div>
+   <section class="services-studio">
         
         <!-- Header -->
         <div class="studio-header">
@@ -102,9 +96,9 @@
         </div>
         
         <!-- Grid de servicios -->
-        <div class="nexus-grid">
+        <div class="services-grid">
             <!-- Servicio 1 -->
-            <div class="nexus-service">
+            <div class="card-servicios">
                 <div class="service-icon-container">
                     <div class="service-icon">✧</div>
                 </div>
@@ -119,7 +113,7 @@
             </div>
             
             <!-- Servicio 2 -->
-            <div class="nexus-service">
+            <div class="card-servicios">
                 <div class="service-icon-container">
                     <div class="service-icon">♢</div>
                 </div>
@@ -134,7 +128,7 @@
             </div>
             
             <!-- Servicio 3 -->
-            <div class="nexus-service">
+            <div class="card-servicios">
                 <div class="service-icon-container">
                     <div class="service-icon">✶</div>
                 </div>
@@ -149,7 +143,7 @@
             </div>
             
             <!-- Servicio 4 -->
-            <div class="nexus-service">
+            <div class="card-servicios">
                 <div class="service-icon-container">
                     <div class="service-icon">✺</div>
                 </div>
@@ -164,7 +158,7 @@
             </div>
             
             <!-- Servicio 5 -->
-            <div class="nexus-service">
+            <div class="card-servicios">
                 <div class="service-icon-container">
                     <div class="service-icon">✼</div>
                 </div>
@@ -182,7 +176,7 @@
         <!-- CTA -->
         <div class="nexus-cta">
             <h2>¿Listo para revolucionar tu presencia digital?</h2>
-            <a href="#contacto" class="nexus-button">
+            <a href="#contacto" class="btn-secondary">
                 Iniciar Proyecto <i>→</i>
             </a>
         </div>
@@ -191,12 +185,12 @@
         <!-- Equipo Section -->
         <section id="equipo">
             
-                <div class="profile-card">
-                    <div class="card-header">
+                <div class="perfil-tarjeta">
+                    <div class="tarjeta-header">
                         <img src="https://images.unsplash.com/photo-1614790871804-fe037bdc1214?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="Fondo creativo" >
                     </div>
-                    <div class="card-body">
+                    <div class="tarjeta-body">
                         <img src="./assets/images/img-juan.jpeg" alt="Foto perfil" class="avatar">
                         <h3>Romero Juan Cruz</h3>
                         <p class="role">Co-Fundador de Tomix Visuals</p>
@@ -208,19 +202,19 @@
                             <span class="skill">Game designer</span>
                             <span class="skill">Diseñador gráfico</span>
                         </div>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-vimeo-v"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <div class="redes-sociales">
+                            <a href="#" class="red-social"><i class="fab fa-vimeo-v"></i></a>
+                            <a href="#" class="red-social"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="red-social"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="profile-card">
-                    <div class="card-header">
+                <div class="perfil-tarjeta">
+                    <div class="tarjeta-header">
                         <img src="./assets/images/pic-cam-new.jpg" alt="Fondo desarrollo">
                     </div>
-                    <div class="card-body">
+                    <div class="tarjeta-body">
                         <img src="./assets/images/img-profile-tomas.jpg" alt="Foto perfil" class="avatar">
                         <h3>Beron Tomas Nahuel</h3>
                         <p class="role">Fundador de Tomix Visuals</p>
@@ -232,23 +226,23 @@
                             <span class="skill">UX/UI</span>
                             <span class="skill">Productor Audiovisual</span>
                         </div>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <div class="redes-sociales">
+                            <a href="#" class="red-social"><i class="fab fa-github"></i></a>
+                            <a href="#" class="red-social"><i class="fab fa-codepen"></i></a>
+                            <a href="#" class="red-social"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="red-social"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
 
 
-                <div class="profile-card">
-                    <div class="card-header">
+                <div class="perfil-tarjeta">
+                    <div class="tarjeta-header">
                         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
                             alt="Fondo desarrollo">
                     </div>
 
-                    <div class="card-body">
+                    <div class="tarjeta-body">
                         <img src="./assets/images/img-max.jpeg" alt="Foto perfil" class="avatar">
                         <h3>Hidalgo Maximo</h3>
                         <p class="role">Co-Fundador de Tomix Visuals</p>
@@ -260,11 +254,11 @@
                             <span class="skill">Humo</span>
                             <span class="skill">GSAP</span>
                         </div>
-                        <div class="social-links">
-                            <a href="https://github.com/MaximoH04" class="social-link"><i class="fab fa-github"></i></a>
+                        <div class="redes-sociales">
+                            <a href="https://github.com/MaximoH04" class="red-social"><i class="fab fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/m%C3%A1ximo-hidalgo-983b97238?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                                class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                class="red-social"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="red-social"><i class="fab fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
@@ -277,7 +271,7 @@
             <p>¿Listo para llevar tu presencia visual al siguiente nivel? Contáctanos y hablemos sobre tu proyecto.</p>
 
             <div class="contacto-container">
-                <form class="contact-form">
+                <form class="formulario-contacto">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" id="nombre" name="nombre" required>
@@ -332,11 +326,11 @@
 
         <!-- Footer -->
         <footer>
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-vimeo-v"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <div class="redes-sociales">
+                <a href="#" class="red-social"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="red-social"><i class="fab fa-behance"></i></a>
+                <a href="#" class="red-social"><i class="fab fa-vimeo-v"></i></a>
+                <a href="#" class="red-social"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <div class="copyright">
                 © 2025 TOMIX VISUALS. TODOS LOS DERECHOS RESERVADOS.
