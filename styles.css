@@ -227,14 +227,24 @@ footer {
 }
 
 /* Contacto Section */
+#contacto{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
 
 .contacto-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 60px;
   margin-top: 60px;
 }
 
+/* Estilización de form */
 input,
 textarea,
 select {
@@ -245,11 +255,19 @@ select {
   color: white;
   font-size: 1rem;
   transition: all 0.5s ease;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+option{
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.892);
 }
 
 textarea {
   min-height: 180px;
   resize: vertical;
+  color: rgb(255, 254, 254);
 }
 
 button {
@@ -291,13 +309,13 @@ button:hover {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
-  gap: 20px;
+  gap: 20px;  
 }
 
 .red-social {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -305,6 +323,7 @@ button:hover {
   color: #fff;
   font-size: 1.2rem;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .red-social:hover {
@@ -317,108 +336,19 @@ button:hover {
   letter-spacing: 2px;
 }
 
-/* Mobile Navigation (cards equipo)*/
-
-.services {
-  padding: 120px 60px;
-  background: rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2px;
-  margin-top: 80px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.service-item {
-  background: #000000;
-  padding: 60px 40px;
-  text-align: center;
-  transition: all 0.5s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.service-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.05);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.service-item:hover::before {
-  opacity: 1;
-}
-
-.service-item:hover {
-  transform: scale(1.02);
-}
-
-.service-title {
-  font-family: "Bebas Neue", cursive;
-  font-size: 1.8rem;
-  color: #ffffff;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-}
-
-.service-description {
-  font-size: 14px;
-  color: #888888;
-  line-height: 1.6;
-  font-weight: 300;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 100px;
-}
-
-.section-title {
-  font-family: "Bebas Neue", cursive;
-  font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 400;
-  color: #ffffff;
-  letter-spacing: 4px;
-  margin-bottom: 20px;
-}
-
-.section-subtitle {
-  font-size: 18px;
-  font-weight: 300;
-  color: #888888;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-select option {
-  background-color: black;
-  color: white;
-}
-
-select option:hover,
-select option:checked {
-  background-color: #1a1a1a;
-  color: white;
-}
-
-.team-grid {
+/*Cards equipo*/
+#equipo {
+  max-width: 100%;
+  width: 100%;
+  margin: 3rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+  align-items: baseline;
+  justify-content: space-evenly;
 }
 
 .perfil-tarjeta {
   width: 280px;
+
   background: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
@@ -461,7 +391,7 @@ select option:checked {
   background: linear-gradient(transparent, var(--card-bg));
 }
 
-.tarjeta-body {
+.tarjeta-body { 
   padding: 1.5rem;
   text-align: center;
   position: relative;
