@@ -40,3 +40,53 @@ window.addEventListener('load', generateNoise);
             }, 1500); // Tiempo que se muestra el logo solo (1.5 segundos)
         });
 
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const statItems = document.querySelectorAll('.stat-item');
+            const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+
+            // Configuración del Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const statNumber = entry.target.querySelector('.stat-number');
+                        const statItem = entry.target;
+
+                        // Activar animación de la línea
+                        statItem.classList.add('in-view');
+
+                        // Animación del contador si tiene data-count
+                        if (statNumber && statNumber.hasAttribute('data-count')) {
+                            const target = +statNumber.getAttribute('data-count');
+                            animateCounter(statNumber, target);
+                        }
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            // Observar cada stat-item
+            statItems.forEach(item => {
+                observer.observe(item);
+            });
+
+            // Función de animación del contador
+            function animateCounter(element, target) {
+                if (element.hasAttribute('data-animated')) return;
+
+                element.setAttribute('data-animated', 'true');
+                let current = 0;
+                const duration = 2000; // 2 segundos
+                const increment = target / (duration / 16);
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        clearInterval(timer);
+                        current = target;
+                        element.textContent = target === 500 ? target + '+' : target;
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }, 16);
+            }
+        });
