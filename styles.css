@@ -83,15 +83,14 @@ span {
 /* Fonts */
 @font-face {
   font-family: "Skeina";
-  src: url("./assets/fonts/Skeina-Regular.woff2") format("woff2"),
-    url("./assets/fonts/Skeina-Regular.woff") format("woff");
+  src: url("./assets/fonts/Skeina.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Champagne & Limousines";
-  src: url("./assets/fonts/Champagne & Limousines.ttf") format("ttf");
+  src: url("./assets/fonts/Champagne&Limousines.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
