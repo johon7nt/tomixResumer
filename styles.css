@@ -27,24 +27,52 @@ body {
   position: relative;
 }
 
+/* Fonts */
+@font-face {
+  font-family: 'Skeina';
+  src: url("./assets/fonts/Skeina.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Champagne-Limousines';
+  src: url("./assets/fonts/ChampagneLimousines.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ModernSans-Light';
+  src: url("./assets/fonts/ModernSans-Light.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 h1 {
-  font-family: "Skeina";
+  font-family: 'Skeina', sans-serif;
+  font-weight: normal;
 }
 
 h2 {
-  font-family: "Champagne & Limousines";
+  font-family: 'Champagne-Limousines', sans-serif;
+  font-weight: normal;
 }
 
 h3 {
-  font-family: "Modern Sans Light";
+  font-family: 'ModernSans-Light', sans-serif;
+  font-weight: normal;
 }
 
 p {
-  font-family: "Modern Sans Light";
+  font-family: 'ModernSans-Light', sans-serif;
 }
 
 span {
-  font-family: "Modern Sans Light"
+  font-family: 'ModernSans-Light', sans-serif;
 }
 
   /* Pantalla inicial solo con logo */
@@ -80,27 +108,6 @@ span {
       }
   }
 
-/* Fonts */
-@font-face {
-  font-family: "Skeina";
-  src: url("./assets/fonts/Skeina.otf") format("otf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Champagne & Limousines";
-  src: url("./assets/fonts/Champagne&Limousines.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Modern Sans Light";
-  src: url("./assets/fonts/ModernSans-Light.otf") format("otf");
-  font-weight: bold;
-  font-style: normal;
-}
 
 /* Nav var*/
 
@@ -114,7 +121,7 @@ nav {
   -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
   transition: all 0.3s ease;
-  font-family: "Modern Sans Light";
+  font-family: 'ModernSans-Light', sans-serif;
 }
 
 .nav-container {
@@ -232,7 +239,7 @@ footer {
 }
 
 .principal-subtitle {
-  font-family: "Champagne & Limousines", sans-serif;
+  font-family: 'Champagne-Limousines', 'sans-serif';
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   font-weight: 300;
   margin-bottom: 50px;
@@ -257,7 +264,7 @@ footer {
   background: #ffffff;
   color: #000000;
   text-decoration: none;
-  font-family: "Modern Sans Light";
+  font-family: 'ModernSans-Light', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -297,7 +304,7 @@ footer {
   color: #ffffff;
   text-decoration: none;
   font-weight: 400;
-  font-family: "Modern Sans Light";
+  font-family: 'ModernSans-Light', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -888,7 +895,7 @@ h3 {
   color: var(--light);
   font-size: 1rem;
   transition: transform 0.3s ease;
-  font-family: "Modern Sans Light";
+  font-family: 'ModernSans-Light', sans-serif;
 }
 
 .service-features li:hover {
