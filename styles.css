@@ -8,6 +8,18 @@ html {
   scroll-behavior: smooth;
 }
 
+  #noise-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+      mix-blend-mode: overlay;
+      opacity: 0.8;
+  }
+
 body {
   background-color: #0f0f0f;
   color: #fff;
@@ -15,48 +27,87 @@ body {
   position: relative;
 }
 
+/* Fonts */
+@font-face {
+  font-family: 'Skeina';
+  src: url("./assets/fonts/Skeina.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Champagne-Limousines';
+  src: url("./assets/fonts/ChampagneLimousines.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ModernSans-Light';
+  src: url("./assets/fonts/ModernSans-Light.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 h1 {
-  font-family: "Skeina";
+  font-family: 'Skeina', sans-serif;
+  font-weight: normal;
 }
 
 h2 {
-  font-family: "Champagne & Limousines";
+  font-family: 'Champagne-Limousines', sans-serif;
+  font-weight: normal;
 }
 
 h3 {
-  font-family: "Modern Sans Light";
+  font-family: 'ModernSans-Light', sans-serif;
+  font-weight: normal;
 }
 
 p {
-  font-family: "Modern Sans Light";
+  font-family: 'ModernSans-Light', sans-serif;
 }
 
 span {
-  font-family: "Modern Sans Light"
+  font-family: 'ModernSans-Light', sans-serif;
 }
 
-/* Fonts */
-@font-face {
-  font-family: "Skeina";
-  src: url("./assets/fonts/Skeina-Regular.woff2") format("woff2"),
-    url("./assets/fonts/Skeina-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+  /* Pantalla inicial solo con logo */
+  #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      z-index: 10000;
+      transition: opacity 1s ease-out;
+  }
 
-@font-face {
-  font-family: "Champagne & Limousines";
-  src: url("./assets/fonts/Champagne & Limousines.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
+  #loader img {
+      max-width: 300px;
+      width: 80%;
+      animation: fadeIn 2s ease-in-out;
+  }
 
-@font-face {
-  font-family: "Modern Sans Light";
-  src: url("./assets/fonts/ModernSans-Light.otf") format("otf");
-  font-weight: bold;
-  font-style: normal;
-}
+    @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: scale(0.9);
+      }
+
+      to {
+          opacity: 1;
+          transform: scale(1);
+      }
+  }
+
 
 /* Nav var*/
 
@@ -70,7 +121,7 @@ nav {
   -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
   transition: all 0.3s ease;
-  font-family: "Modern Sans Light";
+  font-family: 'ModernSans-Light', sans-serif;
 }
 
 .nav-container {
@@ -188,7 +239,7 @@ footer {
 }
 
 .principal-subtitle {
-  font-family: "Champagne & Limousines", sans-serif;
+  font-family: 'Champagne-Limousines', 'sans-serif';
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   font-weight: 300;
   margin-bottom: 50px;
@@ -213,7 +264,7 @@ footer {
   background: #ffffff;
   color: #000000;
   text-decoration: none;
-  font-family: "Modern Sans Light";
+  font-family: 'ModernSans-Light', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -253,7 +304,7 @@ footer {
   color: #ffffff;
   text-decoration: none;
   font-weight: 400;
-  font-family: "Modern Sans Light";
+  font-family: 'ModernSans-Light', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -641,39 +692,76 @@ h3 {
 }
 
 .highlight-box {
-  background: rgba(110, 69, 224, 0.05);
-  border: 1px solid rgba(110, 69, 224, 0.2);
+  background: rgba(110, 69, 224, 0.08);
+  border: 1px solid rgba(110, 69, 224, 0.3);
   padding: 25px 35px;
   margin: 40px auto;
   max-width: 700px;
-  border-radius: 10px;
+  border-radius: 12px;
   font-style: italic;
   color: #ffffff;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(110, 69, 224, 0.2);
+  filter: blur(0px);
 }
 
-.highlight-box::after {
+.highlight-box::before {
   content: "";
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.03), transparent);
-  animation: shimmer 8s linear infinite;
-  z-index: 1;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #00f0ff 0%, #6e45e0 100%);
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+  animation: glow-loop 3s linear infinite;
+  transition: opacity 0.3s ease;
 }
 
-@keyframes shimmer {
+.highlight-box:hover::before {
+  opacity: 0.3;
+  filter: blur(5px);
+}
+
+
+@keyframes glow-loop {
+  0%, 100% {
+    opacity: 0.08;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.highlight-box:hover {
+  background: rgba(110, 69, 224, 0.12);
+  box-shadow: 0 0 30px rgba(110, 69, 224, 0.4), 0 0 60px rgba(0, 240, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+  animation: glitchPulse 0.40s infinite;
+}
+
+@keyframes glitchPulse {
   0% {
-    transform: rotate(0deg);
+    transform: translate(0);
   }
-
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(1px, 1px);
+  }
   100% {
-    transform: rotate(360deg);
+    transform: translate(0);
   }
 }
+
 
 .estadisticas-container {
   display: flex;
@@ -818,7 +906,7 @@ h3 {
   color: var(--light);
   font-size: 1rem;
   transition: transform 0.3s ease;
-  font-family: "Modern Sans Light";
+  font-family: 'ModernSans-Light', sans-serif;
 }
 
 .service-features li:hover {
@@ -868,7 +956,7 @@ h3 {
 .service-icon {
   font-size: 2.5rem;
   background: linear-gradient(135deg, var(--light), var(--secondary));
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
