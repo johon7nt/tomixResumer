@@ -270,12 +270,16 @@ footer {
 
 /* Contacto Section */
 #contacto {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 5rem;
+}
 
+.contacto-titulo{
+  display: flex;
+  flex-direction: column;
 }
 
 .contacto-container {
@@ -284,6 +288,8 @@ footer {
   align-items: center;
   gap: 60px;
   margin-top: 60px;
+  width: 100%;
+  height: 100%;
 }
 
 /* Estilización de form */
@@ -299,6 +305,13 @@ select {
   transition: all 0.5s ease;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.formulario-contacto{
+
+  width: 45%;
+  padding-right: 1rem;
+
 }
 
 option {
@@ -338,7 +351,6 @@ button:hover {
 .info-item {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
 }
 
 .info-icon {
@@ -389,8 +401,7 @@ button:hover {
 }
 
 .perfil-tarjeta {
-  width: 280px;
-
+  width: 280px; 
   background: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;

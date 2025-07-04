@@ -88,7 +88,7 @@
 
 
 
-    <section class="services-studio">
+    <section class="services-studio" id="servicios">
 
         <!-- Header -->
         <div class="studio-header">
@@ -184,7 +184,7 @@
                 <img src="./assets/images/pic-cam-new.jpg" alt="Fondo desarrollo">
             </div>
             <div class="tarjeta-body">
-                <img src="./assets/images/img-profile-tomas.jpg" alt="Foto perfil" class="avatar">
+                <img src="./assets/images/img-tomito.png" alt="Foto perfil" class="avatar">
                 <h3>Beron Tomas Nahuel</h3>
                 <p class="role">Fundador de Tomix Visuals</p>
                 <p class="bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam excepturi
@@ -209,7 +209,7 @@
                     alt="Fondo creativo">
             </div>
             <div class="tarjeta-body">
-                <img src="./assets/images/img-juan.jpeg" alt="Foto perfil" class="avatar">
+                <img src="./assets/images/img-juan.png" alt="Foto perfil" class="avatar">
                 <h3>Romero Juan Cruz</h3>
                 <p class="role">Co-Fundador de Tomix Visuals</p>
                 <p class="bio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita maxime tenetur
@@ -235,7 +235,7 @@
             </div>
 
             <div class="tarjeta-body">
-                <img src="./assets/images/img-max.jpeg" alt="Foto perfil" class="avatar">
+                <img src="./assets/images/img-max.png" alt="Foto perfil" class="avatar">
                 <h3>Hidalgo Maximo</h3>
                 <p class="role">Co-Fundador de Tomix Visuals</p>
                 <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ab ducimus
@@ -259,9 +259,11 @@
 
     <!-- Contacto Section -->
     <section id="contacto">
-        <h2>Contacto</h2>
-        <p>¿Listo para llevar tu presencia visual al siguiente nivel? Contáctanos y hablemos sobre tu proyecto.</p>
-
+        <div class="contacto-titulo">
+            <h2>Contacto</h2>
+            <br>
+            <p>¿Listo para llevar tu presencia visual al siguiente nivel? Contáctanos y hablemos sobre tu proyecto.</p>
+        </div>
         <div class="contacto-container">
             <form class="formulario-contacto">
                 <div class="form-group">
@@ -272,7 +274,7 @@
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-                <div class="form-group">
+                    <div class="form-group">
                     <label for="servicio">Servicio de interés</label>
                     <select id="servicio" name="servicio" class="form-control">
                         <option value="">Seleccione un servicio</option>
@@ -281,7 +283,8 @@
                         <option value="fotografia">Fotografía de productos</option>
                         <option value="redes">Gestión de redes</option>
                         <option value="web">Desarrollo web</option>
-                    </select>
+                        <option value="web">Otro/option>
+                    </select> 
                 </div>
                 <div class="form-group">
                     <label for="mensaje">Mensaje</label>
