@@ -6,12 +6,14 @@
     <meta name="viewport" content="initial-scale=1.0">
     <title>Tomix Visuals Oficial</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="scroll-animaciones.css">-->
     <link rel="icon" href="/assets/images/logo-tomix-blanco.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+
     <canvas id="noise-canvas"></canvas>
 
     <!-- Capa de contenido -->
@@ -22,7 +24,7 @@
 
     <nav id="navbar">
         <div class="nav-container">
-            <img src="./assets/images/logo-tomix-blanco.png" class="logo" href="#inicio"></img>
+            <img src="/assets/images/logo-tomix-blanco.png" class="logo"></img>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio">INICIO</a></li>
                 <li><a href="#nosotros">NOSOTROS</a></li>
@@ -45,7 +47,7 @@
         </div>
     </section>
 
-
+    
     <section class="nosotros-section" id="nosotros">
         <div class="nosotros-content">
             <div class="nosotros-header">
@@ -54,17 +56,27 @@
             </div>
 
             <p>
-                "<strong>Tomix Visuals</strong> nació de la pasión compartida por el diseño, el cine y lo digital.
-                Entre cafés y renders, entendimos que las marcas necesitaban algo más que contenido:
-                <strong>necesitaban impacto</strong>. Hoy, seguimos con ese mismo fuego, ayudando a emprendedores como
-                nosotros a brillar con <strong>identidad propia</strong>"
+                "Desde la pasión por el diseño, el cine y lo digital nació <strong>Tomix Visuals</strong>. 
+                Entre café y renders, notamos que las marcas necesitaban más que contenido: <strong>necesitaban hacer ruido</strong>.
+                De este modo, seguimos aún con el mismo fuego, ayudándote desde emprendedores como tú y yo a <strong>brillar con luz propia</strong>."
             </p>
 
-            <div class="highlight-box">
-                <p>
-                    No vendemos diseños ni videos. Creamos experiencias visuales que conectan, emocionan y dejan huella.
-                    Somos un equipo de creadores que apuesta por lo auténtico, lo diferente y lo disruptivo.
-                </p>
+            <div class="e-card playing">
+            <div class="image"></div>
+            
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            
+
+                <div class="infotop">
+                
+            No vendemos diseños, ni videos. Vendemos experiencias. 
+            Porque eso es lo que importa: conectar, emocionar y dejar huella. 
+            Tomix Visuals inclinándose por lo auténtico, lo diferente, lo disruptivo.
+            <br>
+            <div class="name">Tomix Visuals</div>
+            </div>
             </div>
 
             <div class="estadisticas-container">
@@ -90,8 +102,6 @@
             </div>
         </div>
     </section>
-
-
 
     <section class="services-studio" id="servicios">
 
@@ -179,7 +189,6 @@
                     </ul>
             </div>
         </div>
-        </div>
     </section>
 
     <!-- Equipo Section -->
@@ -259,7 +268,6 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
     <!-- Contacto Section -->
@@ -332,63 +340,21 @@
         <div class="copyright">
             © 2025 TOMIX VISUALS. TODOS LOS DERECHOS RESERVADOS.
         </div>
+        
+<a href="#inicio">
+<button class="boton_hacia_arriba"> Volver al inicio
+</button>
+</a>
     </footer>
-    </div>
-    <script src="/tomixResumer/script.js"></script>
+    <script src="/script.js"></script>
+    <!-- <script src="/scroll-animaciones.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
+<script>
 
-        const box = document.querySelector(".highlight-box");
+</script>   
 
-        gsap.fromTo(box, {
-            y: 80,
-            opacity: 0,
-            filter: "blur(12px)",
-            boxShadow: "0 0 0px rgba(110, 69, 224, 0.0)"
-        }, {
-            scrollTrigger: {
-                trigger: box,
-                start: "top 80%",
-                toggleActions: "play none none none"
-            },
-            duration: 1.5,
-            ease: "power3.out",
-            y: 0,
-            opacity: 1,
-            filter: "blur(0px)",
-            boxShadow: "0 0 25px rgba(110, 69, 224, 0.3)",
-            onUpdate: function () {
-                const glow = 25 * this.progress;
-                box.style.boxShadow = `0 0 ${glow}px rgba(110, 69, 224, 0.4)`;
-            },
-            onComplete: () => {
-                glitchLoop(box);
-            }
-        });
-
-        function glitchLoop(el) {
-            const tl = gsap.timeline({ repeat: -1, repeatDelay: 3 });
-
-            tl.to(el, {
-                opacity: 0.95,
-                x: -2,
-                duration: 0.05,
-                ease: "none"
-            })
-                .to(el, {
-                    x: 2,
-                    duration: 0.05,
-                    ease: "none"
-                })
-                .to(el, {
-                    x: 0,
-                    duration: 0.05,
-                    ease: "none"
-                });
-        }
-    </script>
 
 </body>
 
