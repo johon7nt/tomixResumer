@@ -75,6 +75,8 @@ span {
   font-family: 'ModernSans-Light', sans-serif;
 }
 
+
+
   /* Pantalla inicial solo con logo */
   #loader {
       position: fixed;
@@ -322,6 +324,7 @@ footer {
 /* Contacto Section */
 #contacto {
   display: flex;
+  font-family: 'ModernSans-Light';
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -965,4 +968,137 @@ h3 {
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+}
+
+/* INICIA RESPONSIVE DE LAS CARDS*/
+@media (max-width: 768px) {
+  #equipo {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 1rem;
+  }
+
+  .perfil-tarjeta {
+    width: 100%;
+    max-width: 320px;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .perfil-tarjeta:hover {
+    transform: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .perfil-tarjeta:hover .tarjeta-header img {
+    transform: none;
+  }
+
+  .perfil-tarjeta:hover .avatar {
+    border-color: var(--card-bg);
+    box-shadow: none;
+  }
+
+  .perfil-tarjeta:hover .role::after {
+    width: 30px;
+  }
+
+  .perfil-tarjeta:hover .skill {
+    background: rgba(110, 69, 224, 0.1);
+  }
+
+  .social-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    transform: none;
+  }
+}
+
+
+/* FINALIZA RESPONSIVE DE LAS CARDS*/
+
+
+/* INICIA RESPONSIVE DEL FORMULARIO*/
+@media (max-width: 768px) {
+  .contacto-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .formulario-contacto {
+    width: 100%;
+    padding: 0;
+  }
+
+  .contact-info {
+    display: none;
+  }
+
+  .info-item {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  input, textarea, select {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
+
+  .red-social {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* FINALIZA RESPONSIVE DEL FORMULARIO*/
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    border: none;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+  }
 }

@@ -28,6 +28,7 @@
                 <li><a href="#nosotros">NOSOTROS</a></li>
                 <li><a href="#servicios">SERVICIOS</a></li>
                 <li><a href="#contacto">CONTACTO</a></li>
+                <button class="mobile-menu-btn" id="menuToggle">☰</button>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </div>
@@ -337,7 +338,7 @@
         </div>
     </footer>
     </div>
-    <script src="/tomixResumer/script.js"></script>
+    <script src="/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
@@ -391,6 +392,13 @@
                     ease: "none"
                 });
         }
+        // nav var responsive 
+        const menuBtn = document.getElementById("menuToggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        });
     </script>
 
 </body>
