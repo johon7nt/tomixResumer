@@ -90,3 +90,21 @@ window.addEventListener('load', generateNoise);
                 }, 16);
             }
         });
+
+        document.querySelectorAll('.seleccionar-plan').forEach(boton => {
+        boton.addEventListener('click', function () {
+            const plan = this.getAttribute('data-plan');
+            
+            // Seleccionar automáticamente "Desarrollo web"
+            const servicioSelect = document.getElementById('servicio');
+            if (servicioSelect) {
+            servicioSelect.value = 'web';
+            }
+
+            // Autocompletar mensaje
+            const mensaje = document.getElementById('mensaje');
+            if (mensaje) {
+            mensaje.value = `Hola! Estoy interesado en contratar el ${plan}. Me gustaría recibir más información sobre el proceso y cómo comenzamos.`;
+            }
+        });
+        });

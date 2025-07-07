@@ -607,7 +607,6 @@ h3 {
   transform: translateY(-3px);
 }
 
-/* From Uiverse.io by cssbuttons-io */ 
 .boton_hacia_arriba {
  --glow-color: #b0b0a9;
  --glow-spread-color: #e6e6e8;
@@ -1035,6 +1034,141 @@ h3 {
   align-items: flex-start;
   gap: 1rem;
 }
+
+.plans-section {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.plans-header h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Skeina', sans-serif;
+}
+
+.plans-header p {
+  font-size: 1.1rem;
+  color: #a0a0b0;
+  margin-bottom: 3rem;
+}
+
+.cards__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card.plan {
+  background: linear-gradient(145deg, #141420, #0f0f1a);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 16px rgba(110, 69, 224, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card.plan:hover {
+  box-shadow: 0 12px 24px rgba(110, 69, 224, 0.3);
+  transform: translateY(-5px);
+}
+
+.card.plan.destacado {
+  position: relative;
+  border-color: #6e45e0;
+  box-shadow: 0 0 25px rgba(110, 69, 224, 0.4);
+  background: linear-gradient(145deg, #1e1e2e, #151523);
+  animation: glowCard 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowCard {
+  0% {
+    box-shadow: 0 0 20px rgba(110, 69, 224, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(110, 69, 224, 0.6);
+  }
+}
+
+/* Etiqueta de "DESTACADO" */
+.destacado-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff2d75;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px rgba(255, 45, 117, 0.5);
+  transform: rotate(5deg);
+  z-index: 3;
+}
+
+.card.plan .card__heading {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card.plan .card__price {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00f0ff, #ff2d75);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.card.plan ul {
+  text-align: left;
+  padding-left: 0;
+  list-style: none;
+  margin: 0 0 1.8rem 0;
+}
+
+.card.plan ul li {
+  margin: 0.5rem 0;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+}
+
+.card.plan .cta {
+  margin-top: auto;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-family: 'ModernSans-Light', sans-serif;
+  padding: 12px;
+  padding-inline: 75px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.card.plan .cta:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+.card_bullets {
+  font-family: 'ModernSans-Light', sans-serif;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cards__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
 
 /* INICIA RESPONSIVE DE LAS CARDS*/
 @media (max-width: 768px) {
