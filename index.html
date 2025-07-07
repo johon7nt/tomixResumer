@@ -6,12 +6,14 @@
     <meta name="viewport" content="initial-scale=1.0">
     <title>Tomix Visuals Oficial</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="scroll-animaciones.css">-->
     <link rel="icon" href="/assets/images/logo-tomix-blanco.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+
     <canvas id="noise-canvas"></canvas>
 
     <!-- Capa de contenido -->
@@ -22,7 +24,7 @@
 
     <nav id="navbar">
         <div class="nav-container">
-            <img src="./assets/images/logo-tomix-blanco.png" class="logo" href="#inicio"></img>
+            <img src="/assets/images/logo-tomix-blanco.png" class="logo"></img>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio">INICIO</a></li>
                 <li><a href="#nosotros">NOSOTROS</a></li>
@@ -46,7 +48,7 @@
         </div>
     </section>
 
-
+    
     <section class="nosotros-section" id="nosotros">
         <div class="nosotros-content">
             <div class="nosotros-header">
@@ -55,17 +57,27 @@
             </div>
 
             <p>
-                "<strong>Tomix Visuals</strong> nació de la pasión compartida por el diseño, el cine y lo digital.
-                Entre cafés y renders, entendimos que las marcas necesitaban algo más que contenido:
-                <strong>necesitaban impacto</strong>. Hoy, seguimos con ese mismo fuego, ayudando a emprendedores como
-                nosotros a brillar con <strong>identidad propia</strong>"
+                "Desde la pasión por el diseño, el cine y lo digital nació <strong>Tomix Visuals</strong>. 
+                Entre café y renders, notamos que las marcas necesitaban más que contenido: <strong>necesitaban hacer ruido</strong>.
+                De este modo, seguimos aún con el mismo fuego, ayudándote desde emprendedores como tú y yo a <strong>brillar con luz propia</strong>."
             </p>
 
-            <div class="highlight-box">
-                <p>
-                    No vendemos diseños ni videos. Creamos experiencias visuales que conectan, emocionan y dejan huella.
-                    Somos un equipo de creadores que apuesta por lo auténtico, lo diferente y lo disruptivo.
-                </p>
+            <div class="e-card playing">
+            <div class="image"></div>
+            
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            
+
+                <div class="infotop">
+                
+            No vendemos diseños, ni videos. Vendemos experiencias. 
+            Porque eso es lo que importa: conectar, emocionar y dejar huella. 
+            Tomix Visuals inclinándose por lo auténtico, lo diferente, lo disruptivo.
+            <br>
+            <div class="name">Tomix Visuals</div>
+            </div>
             </div>
 
             <div class="estadisticas-container">
@@ -91,8 +103,6 @@
             </div>
         </div>
     </section>
-
-
 
     <section class="services-studio" id="servicios">
 
@@ -180,7 +190,6 @@
                     </ul>
             </div>
         </div>
-        </div>
     </section>
 
     <!-- Equipo Section -->
@@ -260,7 +269,6 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
     <!-- Contacto Section -->
@@ -336,6 +344,11 @@
         <div class="copyright">
             © 2025 TOMIX VISUALS. TODOS LOS DERECHOS RESERVADOS.
         </div>
+        
+<a href="#inicio">
+<button class="boton_hacia_arriba"> Volver al inicio
+</button>
+</a>
     </footer>
     </div>
     <script src="/script.js"></script>
@@ -392,14 +405,8 @@
                     ease: "none"
                 });
         }
-        // nav var responsive 
-        const menuBtn = document.getElementById("menuToggle");
-        const navLinks = document.querySelector(".nav-links");
-
-        menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        });
     </script>
+
 
 </body>
 
