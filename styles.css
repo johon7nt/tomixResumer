@@ -251,6 +251,34 @@ footer {
   animation: fadeInUp 2s ease-out 1.5s both;
 }
 
+#typed {
+  font-family: 'ModernSans-Light', sans-serif;
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  
+}
+
+.typed-line {
+  display: inline-flex;
+  align-items: center;
+}
+
+.custom-cursor {
+  display: inline-block;
+  width: 3px;                      /* grosor de la línea */
+  height: 1em;                     /* ✅ exactamente la altura del texto */
+  background-color: #ffffff;       /* color de la línea */
+  margin-left: 2px;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 /*BOTONES PAGINA*/
 
 .principal-buttons {
@@ -258,6 +286,7 @@ footer {
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 30px;
   animation: fadeInUp 2s ease-out 2s both;
 }
 
@@ -1270,6 +1299,36 @@ h3 {
   }
 }
 
+.planes-info-extra {
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  background-color: #11111b;
+  border-left: 4px solid #00f0ff;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'ModernSans-Light', sans-serif;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+}
+
+.planes-info-extra h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #00f0ff;
+}
+
+.planes-info-extra ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.planes-info-extra li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
 
 
 /* INICIA RESPONSIVE DE LAS CARDS*/
